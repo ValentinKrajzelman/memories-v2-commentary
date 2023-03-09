@@ -1,3 +1,6 @@
+//estos son los controllers es decir las funciones que se llaman segun las rutas
+//utilizan modelos para definir la informacion que se va a guardar o pedir de 
+//la mongoDB
 import express from 'express';
 import mongoose from 'mongoose';
 

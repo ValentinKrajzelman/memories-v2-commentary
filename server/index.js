@@ -3,7 +3,8 @@
 import express from "express";
 //bodyparser nos permite trabajar con json con una serie de funcionalidades extendidas
 import bodyParser from "body-parser";
-//mongoose se usa para crear los modelos que se mandan a la mongodb
+//mongoose se usa para crear la conexion con la mongoDB, tambien para crear los modelos
+//es decir para definir la informacion que se va a guardar en mongoDB
 import mongoose from "mongoose";
 //cors (cross origin requests) nos permite recibir requests de varios origenes
 import cors from "cors";
@@ -18,7 +19,7 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
-//ruta general 
+//starting point de las routes, que dirige los requests sobre posts a postRoutes
 app.use('/posts', postRoutes);
 
 //codigo de conexion de atlas
